@@ -8,4 +8,10 @@ public class Peasant {
         this.healthLevel = healthLevel;
         this.name = name;
     }
+    public void step(){
+
+    }
+    public String getInfo(){
+        return ("NAME: " + name + " " +  "ID: " + id + " " + "HEALTH: " + healthLevel + " " );
+    }
 }

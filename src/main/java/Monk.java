@@ -1,5 +1,17 @@
-public class Monk extends BasicHero {
-    public Monk( String name) {
-        super(id, healthLevel, name, "Monk", attackLevelBase: 5, initiative: 7, int heal: 2);
+public class Monk extends BazeHero {
+    public Monk(int id) {
+        super(id);
+        this.heal = heal;
+
+    }
+
+    public int heal;
+
+    public String getInfo() {
+        return ("NAME: " + name + " " + "TYPE: " + type + " " + "ID: " + id + " " + "HEALTH: " + healthLevel + " " + " Initiative: " + initiative + " " + "HEAL: " + heal + " ");
+    }
+
+    public void step() {
+
     }
 }

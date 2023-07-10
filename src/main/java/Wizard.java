@@ -1,8 +1,24 @@
-public class Wizard extends BasicHero{
+public class Wizard extends BazeHero {
 
-    public Wizard(int id, int healthLevel, String name, int type, int attackLevelBase, int initiative, int heal) {
-        super(id, healthLevel, name, type, attackLevelBase, initiative);
+    public Wizard(int id) {
+        super(id);
         this.heal = heal;
     }
+
     public int heal;
+
+//    public Wizard(int id) {
+//        super(id);
+//    }
+    //@Override
+
+    public String getInfo() {
+        return ("NAME: " + name + " " + "TYPE: " + type + " " + "ID: " + id + " " + "HEALTH: " + healthLevel + " " + " Initiative: " + initiative + " " + "HEAL: " + heal);
+    }
+
+    public void step() {
+
+
+    }
 }
+
