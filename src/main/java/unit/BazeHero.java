@@ -12,8 +12,11 @@ public abstract class BazeHero implements Action {
         String name;
         String type;
         int attackLevelBase;
-        int initiative;
+        protected int initiative;
         protected Coordinates location;
+        public int getInitiative() {
+            return initiative;
+        }
 
 
         public BazeHero(String name,int id,int healthLevel, String type,int attackLevelBase,int initiative, int x, int y) {
@@ -35,7 +38,7 @@ public abstract class BazeHero implements Action {
         public void step(ArrayList<BazeHero> team2){
 
         }
-        protected int[] finNearEnemi(ArrayList<BazeHero> enemies){
+        protected BazeHero finNearEnemi(ArrayList<BazeHero> enemies){
             double min = 100;
 
             int count = 0;
@@ -48,7 +51,7 @@ public abstract class BazeHero implements Action {
                     count = i;
                 }
             }
-            return new int[] {(int)Math.round(min), count};
+            return enemies.get(count);
         }
     }
 

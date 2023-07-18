@@ -9,6 +9,11 @@ public class Infantry extends BazeHero {
         this.attackLevelBase = attackLevelBase;
     }
 
+    @Override
+    public void step(ArrayList<BazeHero> enemies, ArrayList<BazeHero> ours) {
+
+    }
+
     //
 //    public unit.Infantry(int id) {
 //        super(id);
@@ -20,7 +25,7 @@ public class Infantry extends BazeHero {
 
     @Override
     public void step(ArrayList<BazeHero> enemies) {
-        int [] temp = finNearEnemi(enemies);
-        System.out.println("LN = " + temp[0] + " ENEMIES NAME" + enemies.get(temp[1]).name);
+        BazeHero temp = finNearEnemi(enemies);
+        //System.out.println("LN = " + temp[0] + " ENEMIES NAME" + enemies.get(temp[1]).name);
     }
 }

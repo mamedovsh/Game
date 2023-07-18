@@ -16,14 +16,19 @@ public class Wizard extends BazeHero {
 //    }
     //@Override
 
+    @Override
+    public void step(ArrayList<BazeHero> enemies, ArrayList<BazeHero> ours) {
+
+    }
+
     public String getInfo() {
         return ("NAME: " + name + " " + "TYPE: " + type + " " + "ID: " + id + " " + "HEALTH: " + healthLevel + " " + " Initiative: " + initiative + " " + "HEAL: " + heal + " " + "X = " + location.x + " " + "Y= " + location.y);
     }
 
     @Override
     public void step(ArrayList<BazeHero> enemies) {
-        int [] temp = finNearEnemi(enemies);
-        System.out.println("LN = " + temp[0] + " ENEMIES NAME" + enemies.get(temp[1]).name);
+        BazeHero temp = finNearEnemi(enemies);
+        //System.out.println("LN = " + temp[0] + " ENEMIES NAME" + enemies.get(temp[1]).name);
     }
 }
 
