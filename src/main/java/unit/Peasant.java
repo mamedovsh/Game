@@ -9,6 +9,7 @@ public class Peasant extends BazeHero {
     int initiative;
     int x;
     int y;
+    public boolean busy = false;
 
 
     public Peasant(String name,int id, int healthLevel,int initiative,int x,int y) {
@@ -30,7 +31,7 @@ public class Peasant extends BazeHero {
 
     @Override
     public void step(ArrayList<BazeHero> enemies, ArrayList<BazeHero> ours) {
-
+if (this.healthLevel == 0) this.busy = true;
     }
 
     public String getInfo(){

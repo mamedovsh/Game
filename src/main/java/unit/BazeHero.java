@@ -30,6 +30,15 @@ public abstract class BazeHero implements Action {
 
 
         }
+        public Coordinates getLocation(){
+            return location;
+        }
+        public int getHealthLevel(){
+            return healthLevel;
+        }
+        public String toString(){
+            return super.getClass().getSimpleName();
+        }
 
         public String getInfo() {
 

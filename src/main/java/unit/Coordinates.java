@@ -11,7 +11,7 @@ public class Coordinates {
         return Math.sqrt((dx*dx)+(dy*dy));
     }
 
-    int x;
-   int y;
+    public int x;
+   public int y;
 
 }
