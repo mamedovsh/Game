@@ -34,7 +34,7 @@ public class Wizard extends BazeHero {
 
 
         for (BazeHero item : ours){
-            if ( item.healthLevel < 100) {
+            if ( item.healthLevel < 99 & item.healthLevel > 0) {
                 item.healthLevel += this.heal;
                 System.out.println("Вылечил: " + item.type);
                 return;

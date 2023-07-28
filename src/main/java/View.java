@@ -1,9 +1,7 @@
-
-
 import unit.BazeHero;
-import unit.Main;
 
 import java.util.Collections;
+
 public class View {
     private static int step = 1;
     private static final int[] l = {0};
@@ -50,7 +48,7 @@ public class View {
         step++;
         Main.unitedTeam.forEach((v) -> l[0] = Math.max(l[0], v.getInfo().length()));
         System.out.print("_".repeat(l[0]*2));
-        System.out.println("");
+        System.out.println();
         System.out.print(top10 + "    ");
         System.out.print(AnsiColors.ANSI_GREEN+":\tGreen side"+AnsiColors.ANSI_RESET);
         //for (int i = 0; i < l[0]-9; i++)

@@ -54,13 +54,18 @@ public abstract class BazeHero implements Action {
             for (int i = 0; i < enemies.size(); i++) {
                 count ++;
 
-                if (location.calcDistance(enemies.get(i).location) < min){
+                if (location.calcDistance(enemies.get(i).location) < min & enemies.get(i).healthLevel > 0){
                     min = location.calcDistance(enemies.get(i).location);
 
                     count = i;
                 }
             }
             return enemies.get(count);
+        }
+        protected void getDamage(float damage) {
+            this.healthLevel -= damage;
+            if (healthLevel < 0) healthLevel=0;
+            if (healthLevel > 100);
         }
     }
 

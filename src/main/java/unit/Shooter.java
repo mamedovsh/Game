@@ -23,7 +23,8 @@ public class Shooter extends BazeHero {
         if(this.shoots == 0) return;
 
         BazeHero temp = finNearEnemi(enemies);
-        temp.healthLevel = temp.healthLevel - this.attackLevelBase;
+        //temp.healthLevel = temp.healthLevel - this.attackLevelBase;
+        temp.getDamage(this.attackLevelBase);
 
         for (BazeHero item : ours){
             if (item.type.contains("Peasant")&& !((Peasant)(item)).busy && item.healthLevel > 0) {
